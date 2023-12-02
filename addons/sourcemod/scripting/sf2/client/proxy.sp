@@ -1799,6 +1799,16 @@ Action Timer_ClientPostWeapons(Handle timer, any userid)
 					weaponHandle = null;
 					EquipPlayerWeapon(client, entity);
 				}
+				case 307:
+				{
+					TF2_RemoveWeaponSlot(client, slot);
+					
+					weaponHandle = PrepareItemHandle("tf_weapon_stickbomb", 307, 0, 0, "135 ; 0.0");
+					int entity = TF2Items_GiveNamedItem(client, weaponHandle);
+					delete weaponHandle;
+					weaponHandle = null;
+					EquipPlayerWeapon(client, entity);
+				}
 			}
 		}
 		delete weaponHandle;
@@ -1974,7 +1984,7 @@ public Action TF2Items_OnGiveNamedItem(int client, char[] classname, int itemDef
 	{
 		case 642:
 		{
-			Handle itemOverride = PrepareItemHandle("tf_wearable", 642, 0, 0, "376 ; 1.0 ; 377 ; 0.2 ; 57 ; 2 ; 412 ; 1.10");
+			Handle itemOverride = PrepareItemHandle("tf_wearable", 642, 0, 0, "376 ; 1.0 ; 377 ; 0.2 ; 57 ; 4");
 
 			if (itemOverride != null)
 			{
