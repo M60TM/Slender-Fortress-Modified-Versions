@@ -186,6 +186,7 @@ Action Hook_ClientSetTransmit(int client,int other)
 	return Plugin_Continue;
 }
 
+/*
 public Action TF2_CalcIsAttackCritical(int client, int weapon, char[] weaponName, bool &result)
 {
 	if (!g_Enabled || g_RestartSessionEnabled || (g_PlayerEliminated[client] && !g_PlayerProxy[client]))
@@ -221,6 +222,7 @@ public Action TF2_CalcIsAttackCritical(int client, int weapon, char[] weaponName
 
 	return Plugin_Continue;
 }
+*/
 
 void Hook_ClientWeaponEquipPost(int client, int weapon)
 {
